@@ -41,35 +41,6 @@ const actions = {
         const res  = await commit('logout');
         return true;
     },
-    async digitalizedBook({commit},credentials){
-        const res = await PR.uploadBook(credentials);
-        return res;
-    },
-    async updateBooks({commit},credentials){
-      
-        const res = await PR.updateBook(credentials);
-        return res;
-    },
-    async deleteBooks({commit},id){
-        const res = await PR.bookDelete(id);
-        return res;
-    },
-    async fetchCategory(){
-        const res = await PR.getCategory();
-        return res;
-    },
-    async fetchBooks(){
-        const res = await PR.getBooks();
-        return res;
-    },
-    async fetchBooksByRank(){
-        const res = await PR.getBooksByRank();
-        return res;
-    },
-    async createNewCategory({commit},credentials){
-        const res = await PR.addCategory(credentials);
-        return res;
-    }
 }
 
 export default {

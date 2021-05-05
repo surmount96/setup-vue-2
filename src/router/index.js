@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Login.vue'
 import protectedRoutes from "../views/protected/router";
 import  store  from "../store/index";
 import middlewarePipeline from "./kernel/middlewarePipeline";
@@ -9,12 +8,6 @@ import guest from "./middleware/guest";
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    meta:{ middleware: [guest]},
-    component: Home,
-  },
     ...protectedRoutes
 ]
 

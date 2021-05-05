@@ -17,38 +17,5 @@ if(process.env.NODE_ENV === 'development'){
 
 
 export default {
-    csrf(){
-        return axios.get(`${url}sanctum/csrf-cookie`);
-    },
-    login(data){
-        return axios.post(`${url}login`,data)
-    },
-    getBooks(){
-        return axios.get(`${url}fetch-book`);
-    },
-    getBooksByRank(){
-        return axios.get(`${url}fetch-book-by-rank`);
-    },
-    getCategory(){
-        return axios.get(`${url}category`);
-    },
-    addCategory(data){
-        return axios.post(`${url}category`,data);
-    },
-    uploadBook(data){
-        return axios.post(`${url}upload-book`,data);
-    },
-    updateBook(data){
-        // console.log(id)
-        return axios.post(`${url}update-book`,data);
-    },
-    bookDelete(id){
-        return axios.delete(`${url}upload-book/${id.id}`);
-    },
-    borrowBook(data){
-        return axios.post(`${url}borrow`,data);
-    },
-    getBorrowers(){
-        return axios.get(`${url}borrow`);
-    },
+    
 }

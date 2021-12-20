@@ -41,6 +41,7 @@ const actions = {
         const res  = await commit('logout');
         return true;
     },
+
 }
 
 export default {
